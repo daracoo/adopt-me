@@ -1,18 +1,16 @@
-import ReactDOM from 'react-dom';
-import Pet from './Pet';
+import { createRoot } from 'react-dom/client';
+import SearchParams from './SearchParams';
 
 
 const App = () => {
   return (
-        <div>
+    <div>
       <h1>Adopt Me!</h1>
-      <Pet name="Pablo" animal="Dog" breed="Bulldog"/>
-      <Pet name="Pepper" animal="Bird" breed="Cockatiel"/>
-      <Pet name="Doink" animal="Cat" breed="Mixed"/>
+        <SearchParams />
     </div>
   );
 };
 
 const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
+const root = createRoot(container);
 root.render(<App />);
